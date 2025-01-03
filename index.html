@@ -52,8 +52,8 @@
 
         .names-container {
             position: relative;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 40px 20px;
             width: 85%;
         }
 
@@ -62,7 +62,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100%;
+            width: 150%;
             height: auto;
             z-index: 1;
         }
@@ -88,9 +88,10 @@
         .bible-quote {
             font-size: 16px;
             line-height: 1.6;
-            margin: 15px auto;
+            margin-top: 40px;
             width: 85%;
             padding: 10px;
+            margin: 15px auto;
         }
 
         .countdown {
@@ -124,13 +125,15 @@
         .button-container {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 10px;
             padding: 0 15px;
-            margin: 10px 0;
+            margin: 15px 0;
+            width: 100%;
         }
 
         .button {
-            width: 100%;
+            width: 90%;
             padding: 12px 20px;
             background-color: var(--pastel-blue);
             color: white;
@@ -143,18 +146,19 @@
         }
 
         .button i {
-            Margin-center: 10px;
+            margin-right: 10px;
+            font-size: 18px;
         }
 
         .small-decorative-image {
-            width: 60%;
-            max-width: 200px;
+            width: 70%;
+            max-width: 250px;
             margin: 20px auto;
         }
 
         .decorative-image {
-            width: 40%;
-            max-width: 120px;
+            width: 50%;
+            max-width: 180px;
             margin: 15px auto;
         }
 
@@ -176,7 +180,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- El contenido HTML permanece igual -->
         <div class="title">Nuestra Boda</div>
 
         <div class="wedding-image">
@@ -282,24 +285,7 @@
         }
 
         setInterval(updateCountdown, 1000);
-        updateCountdown();document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.fade-in, .image-fade-in');
-            
-            function checkScroll() {
-                images.forEach(image => {
-                    const imageTop = image.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (imageTop < windowHeight * 0.8) {
-                        image.style.opacity = '1';
-                        image.style.transform = 'translateY(0)';
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', checkScroll);
-            checkScroll();
-        });
+        updateCountdown();
     </script>
 </body>
 </html>
