@@ -62,7 +62,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 150%;
+            width: 130%;
             height: auto;
             z-index: 1;
             opacity: 0.8;
@@ -78,6 +78,9 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .date {
@@ -93,7 +96,8 @@
         .bible-quote {
             font-size: 16px;
             line-height: 1.6;
-            margin-top: 40px;
+            margin-top: 60px;
+            margin-bottom: 40px;
             width: 85%;
             padding: 10px;
             margin: 15px auto;
@@ -131,14 +135,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            padding: 0 15px;
-            margin: 15px 0;
             width: 100%;
+            max-width: 500px;
+            margin: 15px auto;
         }
 
         .button {
-            width: 90%;
+            width: 85%;
             padding: 12px 20px;
             background-color: var(--pastel-blue);
             color: white;
@@ -147,7 +150,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 5px 0;
+            margin: 8px auto;
         }
 
         .button i {
@@ -208,7 +211,9 @@
         <div class="names-container">
             <img src="marco1.png" alt="Marco decorativo" class="marco-imagen">
             <div class="names">
-                Nineth <span class="names-separator">&</span> Kevin
+                Nineth
+                <span class="names-separator">&</span>
+                Kevin
             </div>
             <div class="date">06 de febrero de 2025</div>
         </div>
@@ -284,7 +289,6 @@
     </div>
 
     <script>
-        // Script del countdown
         const weddingDate = new Date('February 06, 2025 14:00:00').getTime();
 
         function updateCountdown() {
