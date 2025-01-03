@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Alex+Brush&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-blue: #B8D8E3;
+            --light-blue: #E3F1F5;
+            --pastel-pink: #FFD6E5;
+            --light-pink: #FFF0F5;
+            --dark-text: #5B5B5B;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--dark-text);
+            text-align: center;
+            background: linear-gradient(145deg, var(--light-pink) 0%, var(--light-blue) 100%);
+        }
+
+        .container {
+            padding: 15px;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 45px;
+            margin: 15px 0;
+            background: linear-gradient(45deg, var(--pastel-blue), var(--pastel-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wedding-image {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        .wedding-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .names-container {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 85%;
+        }
+
+        .marco-imagen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .names {
+            position: relative;
+            z-index: 2;
+            font-family: 'Great Vibes', cursive;
+            font-size: 40px;
+            margin: 10px 0;
+            background: linear-gradient(45deg, var(--pastel-blue), var(--pastel-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .date {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin: 15px 0;
+            color: var(--dark-text);
+        }
+
+        .bible-quote {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px auto;
+            width: 85%;
+            padding: 10px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+            width: calc(25% - 15px);
+        }
+
+        .countdown-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .countdown-label {
+            font-size: 14px;
+        }
+
+        .details {
+            font-size: 18px;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0 15px;
+            margin: 15px 0;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px 20px;
+            background-color: var(--pastel-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        .button i {
+            margin-right: 10px;
+        }
+
+        .small-decorative-image {
+            width: 60%;
+            max-width: 200px;
+            margin: 15px auto;
+        }
+
+        .decorative-image {
+            width: 40%;
+            max-width: 120px;
+            margin: 15px auto;
+        }
+
+        .dress-code {
+            margin: 20px 0;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 1px solid var(--pastel-blue);
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        .ornament {
+            font-size: 24px;
+            color: var(--pastel-blue);
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- El contenido HTML permanece igual -->
+        <div class="title">Nuestra Boda</div>
+
+        <div class="wedding-image">
+            <img src="nine3.jpeg" alt="Imagen decorativa inicial">
+        </div>
+
+        <div class="ornament">❧</div>
+
+        <div class="names-container">
+            <img src="marco1.png" alt="Marco decorativo" class="marco-imagen">
+            <div class="names">
+                Nineth <span class="names-separator">&</span> Kevin
+            </div>
+            <div class="date">06 de febrero de 2025</div>
+        </div>
+
+        <div class="bible-quote">
+            "Asi que ya no son dos,<br>
+            sino una sola carne.<br>
+            Por lo tanto, lo que Dios ha unido que no lo separe ningún hombre."<br>
+            <span class="bible-reference">Mateo 19: 6</span>
+        </div>
+
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Días</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Horas</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutos</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Segundos</div>
+            </div>
+        </div>
+
+        <div class="details">
+            Estamos muy contentos por poder invitarte a celebrar<br>
+            nuestra boda
+        </div>
+
+        <img src="anillo2.png" alt="Anillos de boda" class="small-decorative-image">
+
+        <div class="wedding-image">
+            <img src="imagen4.jpeg" alt="Imagen decorativa central">
+        </div>
+
+        <div class="details">
+            2:00 PM<br>
+            Mt Vernon<br>
+            Corte
+        </div>
+
+        <img src="novios.png" alt="Novios" class="decorative-image">
+
+        <div class="button-container">
+            <a href="https://wa.me/1234567890?text=¡Confirmo mi asistencia a su boda!" class="button">
+                <i class="fab fa-whatsapp"></i> Confirmar Asistencia
+            </a>
+            
+            <a href="https://www.google.com/maps/search/?api=1&query=100+S+10th+St+%23+101+Mt+Vernon+IL+62864" class="button">
+                <i class="fas fa-map-marker-alt"></i> Ubicación Ceremonia
+            </a>
+            
+            <a href="https://maps.app.goo.gl/toWjhushbS44JFLT8?g_st=ii" class="button">
+                <i class="fas fa-glass-cheers"></i> Ubicación Recepción
+            </a>
+        </div>
+
+        <div class="wedding-image">
+            <img src="imagen5.jpeg" alt="Imagen decorativa final">
+        </div>
+
+        <div class="dress-code">
+            Vestimenta Formal
+        </div>
+
+        <div class="ornament">❧</div>
+    </div>
+
+    <script>
+        const weddingDate = new Date('February 06, 2025 14:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.fade-in, .image-fade-in');
+            
+            function checkScroll() {
+                images.forEach(image => {
+                    const imageTop = image.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (imageTop < windowHeight * 0.8) {
+                        image.style.opacity = '1';
+                        image.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll();
+        });
+    </script>
+</body>
+</html>
